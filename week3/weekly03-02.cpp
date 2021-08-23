@@ -53,7 +53,7 @@ int main ()
     cout << endl;
     for(int i=0; i < 3; i++)
     {
-        cout << "number : ";
+        cout << "enter number : ";
         cin >> n[i];
     }
 
@@ -61,8 +61,9 @@ int main ()
     max = findmax(n,max);
     cout << "Minimum number is : " << min << endl;
     cout << "Maximum number is : " << max << endl;
-    cout << "2ndMinimum number is : " << findmin2(n,min,max,min2) << endl;
+    
     min2 = findmin2(n,min,max,min2);
+    cout << "2ndMinimum number is : " << min2 << endl;
     cout << "Sum of minimum with 2nd minimum number is : " << min2+min << endl;
 
     return 0;
