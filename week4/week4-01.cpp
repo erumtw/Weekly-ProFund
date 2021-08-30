@@ -24,7 +24,7 @@ int main ()
     double sum = 0;
     for(int i = 0; i < n; i++) //
     { 
-        sum += stod(s[i]); // convert steing to double
+        sum += stod(s[i]); // convert string to double
         
     }
     // cout << sum << endl;
