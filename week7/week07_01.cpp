@@ -7,7 +7,7 @@ void values(unsigned int v[])
     A = v[0];
     B = v[0];
     C = v[0];
-    for (int i = 0; i < 3; i++) // find max(C), min(A)
+    for (int i = 0; i < 3; i++) // find min(A)
     {
         if ( v[i] < A )
         {
@@ -50,6 +50,7 @@ int main ()
     unsigned int x,y,z;
     cout << "Enter 3 Number (each must less than 100) : ";
     cin >> x >> y >> z;
+    unsigned int num[3] {x,y,z};
     if( x > 100 || y > 100 || z > 100)
     {
         cout << "Each number cannot exceed 100.";
@@ -59,8 +60,7 @@ int main ()
         cout << "Sort Order : ";
         string sort;
         cin >> sort;
-        unsigned int num[3] {x,y,z};
-        values(num);
+        values(num); 
         cout << "Sorted : ";
         sorting(sort);
     }

@@ -5,9 +5,24 @@ using namespace std;
 //void values(int);
 int A,B,C;
 
-void mid(unsigned int v[])
+void values(unsigned int v[])
 {
-    for (int i = 0; i < 3; i++)  // find mid(B)
+    A = v[0];
+    B = v[0];
+    C = v[0];
+    for (int i = 0; i < 3; i++) // find min(A)
+    {
+        if ( v[i] < A )
+        {
+            A = v[i];            
+        }
+
+        if ( v[i] > C )
+        {
+            C = v[i];            
+        }
+    }
+     for (int i = 0; i < 3; i++)  // find mid(B)
     {
         if ( v[i] > A && v[i] < C)
         {
@@ -22,9 +37,6 @@ int main ()
     cout << "Enter 3 Number (each must less than 101) : ";
     cin >> x >> y >> z;
     unsigned int num[3] {x,y,z};
-    A = min({x,y,z});
-    C = max({x,y,z});
-    mid(num); // set B
     if( x > 100 || y > 100 || z > 100)
     {
         cout << "Each number cannot exceed 100.";
@@ -34,6 +46,7 @@ int main ()
         cout << "Sort Order : ";
         string sort;
         cin >> sort;
+        values(num);
         cout << "Sorted : ";                                       
         if(sort == "ABC" )
             cout << A << " " << B << " " << C;                          
